@@ -1,2 +1,8 @@
-# Aevo-Documentation-Ru
-Translated Docs page from aevo.xyz
+# FAQs
+
+Click here to be redirected to our FAQs about our products
+
+Сюда вкрути кнопку некст
+
+\-----------------------------------------\
+last modified                                                      was this page helpful?
