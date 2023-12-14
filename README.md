@@ -1,8 +1,4 @@
-# FAQs
+# Часто задаваемые вопросы
 
-Click here to be redirected to our FAQs about our products
+[**Кликни здесь, чтобы перейти на список часто задаваемых вопросов о наших продуктах**](https://help.aevo.xyz/en)
 
-Сюда вкрути кнопку некст
-
-\-----------------------------------------\
-last modified                                                      was this page helpful?

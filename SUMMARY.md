@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FAQs](README.md)
+* [Часто задаваемые вопросы](README.md)
 
 ## AEVO EXCHANGE
 
