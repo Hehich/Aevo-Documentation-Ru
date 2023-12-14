@@ -1,11 +1,13 @@
 ---
-description: 'Here are the articles in this section:'
+description: Статьи данного раздела
 ---
 
-# Technical Architecture
+# Техническая архитектура
 
-{% content-ref url="off-chain-orderbook-and-risk-engine.md" %}
-[off-chain-orderbook-and-risk-engine.md](off-chain-orderbook-and-risk-engine.md)
+
+
+{% content-ref url="sistema-upravleniya-orderami-i-riskami-vne-seti.md" %}
+[sistema-upravleniya-orderami-i-riskami-vne-seti.md](sistema-upravleniya-orderami-i-riskami-vne-seti.md)
 {% endcontent-ref %}
 
 {% content-ref url="on-chain-settlement.md" %}
