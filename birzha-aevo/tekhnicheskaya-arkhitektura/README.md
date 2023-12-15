@@ -10,12 +10,12 @@ description: Статьи данного раздела
 [sistema-upravleniya-orderami-i-riskami-vne-seti.md](sistema-upravleniya-orderami-i-riskami-vne-seti.md)
 {% endcontent-ref %}
 
-{% content-ref url="on-chain-settlement.md" %}
-[on-chain-settlement.md](on-chain-settlement.md)
+{% content-ref url="raschety-vnutri-seti.md" %}
+[raschety-vnutri-seti.md](raschety-vnutri-seti.md)
 {% endcontent-ref %}
 
-{% content-ref url="layer-2-architecture.md" %}
-[layer-2-architecture.md](layer-2-architecture.md)
+{% content-ref url="arkhitektura-layer-2.md" %}
+[arkhitektura-layer-2.md](arkhitektura-layer-2.md)
 {% endcontent-ref %}
 
 {% content-ref url="liquidations.md" %}
