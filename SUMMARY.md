@@ -9,7 +9,7 @@
   * [Система управления ордерами и рисками вне сети](birzha-aevo/tekhnicheskaya-arkhitektura/sistema-upravleniya-orderami-i-riskami-vne-seti.md)
   * [Расчеты внутри сети](birzha-aevo/tekhnicheskaya-arkhitektura/raschety-vnutri-seti.md)
   * [Архитектура Layer 2](birzha-aevo/tekhnicheskaya-arkhitektura/arkhitektura-layer-2.md)
-  * [Liquidations](birzha-aevo/tekhnicheskaya-arkhitektura/liquidations.md)
+  * [Ликвидация](birzha-aevo/tekhnicheskaya-arkhitektura/likvidaciya.md)
   * [Deposit contracts](birzha-aevo/tekhnicheskaya-arkhitektura/deposit-contracts.md)
 * [Options Specifications](birzha-aevo/options-specifications/README.md)
   * [ETH Options](birzha-aevo/options-specifications/eth-options.md)

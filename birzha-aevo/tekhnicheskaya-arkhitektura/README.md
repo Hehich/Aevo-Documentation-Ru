@@ -18,8 +18,8 @@ description: Статьи данного раздела
 [arkhitektura-layer-2.md](arkhitektura-layer-2.md)
 {% endcontent-ref %}
 
-{% content-ref url="liquidations.md" %}
-[liquidations.md](liquidations.md)
+{% content-ref url="likvidaciya.md" %}
+[likvidaciya.md](likvidaciya.md)
 {% endcontent-ref %}
 
 {% content-ref url="deposit-contracts.md" %}
