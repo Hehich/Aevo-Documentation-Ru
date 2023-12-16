@@ -22,6 +22,6 @@ description: Статьи данного раздела
 [likvidaciya.md](likvidaciya.md)
 {% endcontent-ref %}
 
-{% content-ref url="deposit-contracts.md" %}
-[deposit-contracts.md](deposit-contracts.md)
+{% content-ref url="depozitnye-kontrakty.md" %}
+[depozitnye-kontrakty.md](depozitnye-kontrakty.md)
 {% endcontent-ref %}
