@@ -32,7 +32,7 @@
   * [Redemptions](birzha-aevo/aeusd/redemptions.md)
   * [Composition](birzha-aevo/aeusd/composition.md)
 * [Cross-Margin Collateral Framework](birzha-aevo/cross-margin-collateral-framework.md)
-* [Spot Covert Feature](birzha-aevo/spot-covert-feature.md)
+* [Спот-конвертация](birzha-aevo/spot-covert-feature.md)
 * [API Reference](https://api-docs.aevo.xyz/reference/overview)
 
 ## AEVO VAULTS
