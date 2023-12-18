@@ -74,7 +74,7 @@
 
 * [Treasury Vaults](more/treasury-vaults/README.md)
   * [Why Treasury Vaults](more/treasury-vaults/why-treasury-vaults.md)
-  * [Page 1](more/treasury-vaults/page-1.md)
+  * [How to get involved](more/treasury-vaults/how-to-get-involved.md)
 * [Lend Vaults](more/lend-vaults.md)
 * [Legacy Ribbon Finance](more/legacy-ribbon-finance/README.md)
   * [Legacy RBN tokenomics](more/legacy-ribbon-finance/legacy-rbn-tokenomics.md)
