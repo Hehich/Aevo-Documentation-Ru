@@ -16,7 +16,7 @@
   * [Опционы BTC](birzha-aevo/options-specifications/opciony-btc.md)
   * [Цена индекса](birzha-aevo/options-specifications/cena-indeksa.md)
   * [Тарифы](birzha-aevo/options-specifications/tarify.md)
-  * [Margin Framework](birzha-aevo/options-specifications/margin-framework.md)
+  * [Маржинальная структура](birzha-aevo/options-specifications/marzhinalnaya-struktura.md)
   * [Standard Margin](birzha-aevo/options-specifications/standard-margin.md)
   * [Portfolio Margin](birzha-aevo/options-specifications/portfolio-margin.md)
 * [Perpetuals Specifications](birzha-aevo/perpetuals-specifications/README.md)
