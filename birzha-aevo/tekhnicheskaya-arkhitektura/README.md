@@ -1,10 +1,6 @@
----
-description: Статьи данного раздела
----
-
 # Техническая архитектура
 
-
+Ниже приведены статьи данного раздела:
 
 {% content-ref url="sistema-upravleniya-orderami-i-riskami-vne-seti.md" %}
 [sistema-upravleniya-orderami-i-riskami-vne-seti.md](sistema-upravleniya-orderami-i-riskami-vne-seti.md)
