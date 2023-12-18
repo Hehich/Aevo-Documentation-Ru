@@ -1,11 +1,13 @@
-# Спот-конвертация
+# Spot Covert Feature
 
-Спот-конвертация позволяет обменивать активы на бирже. Следуюшие торговые пары доступны:
+he Spot Convert feature helps users swap their assets on the exchange. The following pairs are supported:
 
-| Пара      | Комиссия |
-| --------- | -------- |
-| ETH-USDC  | 0.10%    |
-| WBTC-USDC | 0.10%    |
-| USDT-USDC | 0.01%    |
+| Pair      | Convert Fee |
+| --------- | ----------- |
+| ETH-USDC  | 0.10%       |
+| WBTC-USDC | 0.10%       |
+| USDT-USDC | 0.01%       |
 
-Обмен происходит по индекс--цене актива.
+
+
+The trade happens at the **index price** of the asset.

@@ -11,12 +11,12 @@
   * [Архитектура Layer 2](birzha-aevo/tekhnicheskaya-arkhitektura/arkhitektura-layer-2.md)
   * [Ликвидация](birzha-aevo/tekhnicheskaya-arkhitektura/likvidaciya.md)
   * [Депозитные контракты](birzha-aevo/tekhnicheskaya-arkhitektura/depozitnye-kontrakty.md)
-* [Опционы](birzha-aevo/options-specifications/README.md)
+* [Options Specifications](birzha-aevo/options-specifications/README.md)
   * [Опционы ETH](birzha-aevo/options-specifications/opciony-eth.md)
   * [Опционы BTC](birzha-aevo/options-specifications/opciony-btc.md)
   * [Цена индекса](birzha-aevo/options-specifications/cena-indeksa.md)
   * [Тарифы](birzha-aevo/options-specifications/tarify.md)
-  * [Маржинальная торговля](birzha-aevo/options-specifications/margin-framework.md)
+  * [Margin Framework](birzha-aevo/options-specifications/margin-framework.md)
   * [Standard Margin](birzha-aevo/options-specifications/standard-margin.md)
   * [Portfolio Margin](birzha-aevo/options-specifications/portfolio-margin.md)
 * [Perpetuals Specifications](birzha-aevo/perpetuals-specifications/README.md)
@@ -32,7 +32,7 @@
   * [Redemptions](birzha-aevo/aeusd/redemptions.md)
   * [Composition](birzha-aevo/aeusd/composition.md)
 * [Cross-Margin Collateral Framework](birzha-aevo/cross-margin-collateral-framework.md)
-* [Спот-конвертация](birzha-aevo/spot-covert-feature.md)
+* [Spot Covert Feature](birzha-aevo/spot-covert-feature.md)
 * [API Reference](https://api-docs.aevo.xyz/reference/overview)
 
 ## AEVO VAULTS

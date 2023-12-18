@@ -1,16 +1,21 @@
-# Маржинальная торговля
+# Margin Framework
 
-На бирже использование плеча разрешено ТОЛЬКО для шорта опциона. Это означает, что позиция может быть недостаточно обеспеченной, при условии выполнения требований к начальному и поддерживающему обеспечению.
+On the exchange, ONLY the short-side of the option can use leverage. This means that a position can be under-collateralized as long as it fulfils the initial margin and maintenance margin requirements.
 
-Система обеспечения является кросс-маржинальной, что означает, что все позиции вносят свой вклад в обеспечение счета и могут быть предоставлены для ликвидации, если баланс счета опускается ниже уровня поддерживающей маржи (о которой речь пойдет ниже). Система обеспечения включает несколько ключевых компонентов:
+The margin system is cross-margin, meaning all positions contribute to the margin for an account, and may be put up for liquidation if an account falls below the maintenance margin (covered below).
 
-1. Оценка по маркерам (mark pricing)
-2. Риск-менеджемент
-3. Процесс ликвидации
+The margin system is composed of a few key components:
 
-### Как это работает
+* Mark pricing
+* Risk engine
+* Liquidation engine
 
-Начальная Маржа - Сумма маржи, зарезервированная для открытия позиции. Поддерживающая Маржа - Сумма маржи, зарезервированная для поддержания открытой позиции. Эта сумма ниже начальной маржи, необходимой для открытия. При 1) открытии нового ордера или 2) входе в позицию мы убеждаемся, что у трейдера достаточно собственного капитала:
+### Margin Framework
+
+Initial Margin - The amount of margin reserved to open a position.\
+Maintenance Margin - The amount of margin reserved to keep a position open. This is lower than the initial margin required.
+
+When 1) opening a new order or 2) getting into a position, we ensure that the trader has sufficient equity:
 
 `AB + UP - OO - IM - MM > 0`
 
