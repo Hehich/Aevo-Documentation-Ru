@@ -1,12 +1,30 @@
-# Portfolio Margin
+# Маржа портфеля
 
-Aevo’s portfolio margin provides lower margin requirements and increased leverage for traders who maintain a balanced portfolio of hedged positions. It is calculated based on a risk model which evaluates margin based on the aggregated positions of the account instead of on the individual contract level.
+Маржа портфеля Aevo обеспечитвает более низкие маржинальные требования и повышенное кредитное плечо для трейдеров, которые поддерживают сбалансированный портфель хеджированных позиций. Она рассчитывается на основе модели риска, которая оценивает маржу на основе совокупных позиций счета, а не на уровне отдельных контрактов.
 
-Portfolio margin consists of 2 components: scenario margin and floor margin.
+Маржа портфеля состоит из двух компонентов: сценарной маржи и предельной маржи.
 
-### SCENARIO MARGIN&#x20;
+### Сценарная маржа&#x20;
 
-It represents the core risk of an account’s portfolio by simulating its potential profit and loss under multiple hypothetical market conditions. Aevo evaluates this margin based on 15 scenarios. Each scenario assumes an up/down movement in either the price of the underlying and/or the option volatility. The scenarios are listed below.
+Она отражает основной риск портфеля счета, моделируя его потенциальную прибыль и убытки при различных гипотетических рыночных условиях. Aevo оценивает эту маржу на основе 15 сценариев. Каждый сценарий предполагает движение вверх/вниз цены базового актива и/или волатильности опциона. Сценарии приведены ниже.
+
+| Сценарий | % от максимального движения спота | % от максимального IV сдвига |
+| -------- | --------------------------------- | ---------------------------- |
+| 1        | Up 100%                           | Up 100%                      |
+| 2        | Up 100%                           | Unchanged                    |
+| 3        | Up 100%                           | Down 100%                    |
+| 4        | Up 50%                            | Up 100%                      |
+| 5        | Up 50%                            | Unchanged                    |
+| 6        | Up 50%                            | Down 100%                    |
+| 7        | Unchanged                         | Up 100%                      |
+| 8        | Unchanged                         | Unchanged                    |
+| 9        | Unchanged                         | Down 100%                    |
+| 10       | Down 50%                          | Up 100%                      |
+| 11       | Down 50%                          | Unchanged                    |
+| 12       | Down 50%                          | Down 100%                    |
+| 13       | Down 100%                         | Up 100%                      |
+| 14       | Down 100%                         | Unchanged                    |
+| 15       | Down 100%                         | Down 100%                    |
 
 | Scenario | % of Max. Spot Movement | % of Max. IV Shift |
 | -------- | ----------------------- | ------------------ |
