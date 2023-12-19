@@ -28,7 +28,7 @@
   * [Предзапускные Фьючерсы BLAST](birzha-aevo/kharakteristiki-bessrochnykh-kontraktov/predzapusknye-fyuchersy-blast.md)
   * [Предзапускные Фьючерсы FRIEND](birzha-aevo/kharakteristiki-bessrochnykh-kontraktov/predzapusknye-fyuchersy-friend.md)
 * [aeUSD](birzha-aevo/aeusd/README.md)
-  * [Deposits](birzha-aevo/aeusd/deposits.md)
+  * [Депозиты](birzha-aevo/aeusd/depozity.md)
   * [Redemptions](birzha-aevo/aeusd/redemptions.md)
   * [Composition](birzha-aevo/aeusd/composition.md)
 * [Cross-Margin Collateral Framework](birzha-aevo/cross-margin-collateral-framework.md)
