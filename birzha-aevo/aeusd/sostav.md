@@ -8,35 +8,24 @@ aeUSD поддерживает целевой уровень ликвиднос�
 
 При возникновении избытка USDC в хранилище, мы предпримем следующие действия:
 
+1. Отправим через мост (текущий % - целевой %) количество aevo USDC в [своп-хранилище](https://etherscan.io/address/0x426d1F3866BfcDF4d0efEfeD1Ba3c5E06CaECbE6) в мейннете L1 через [L2 мост](https://explorer.aevo.xyz/address/0x4200000000000000000000000000000000000010)
+2. Произведем обмен USDC на sDAI через 1Inch с помощью функции `execute`
+3. Отправим через мост sDAI обратно в Aevo L1 через [L1 мост](https://etherscan.io/address/0x4082C9647c098a6493fb499EaE63b5ce3259c574), отметив хранилище aeUSD в качестве получателя
+4. Преобразуем aevo sDAI в хранилище aeUSD
 
+Это увеличит соотношение aeUSD к sDAI и повысит  годовую процентную доходность для держателей aeUSD
 
-1. Отправим через мост (текущий % - целевой %) количество aevo USDC в [своп-хранилище](https://etherscan.io/address/0x426d1F3866BfcDF4d0efEfeD1Ba3c5E06CaECbE6) в L1 мейннет через [L2 мост](https://explorer.aevo.xyz/address/0x4200000000000000000000000000000000000010)
-2. пРОИЗВЕДЕН
-3. дж
-4. ыфвф
+**Что произойдёт, если текущий коэффициент ликвидности < целевого значения ликвидности (например, 3% в USDC)?**
 
+При возникновении избытка sDAI в хранилище, мы предпримем следующие действия:
 
+1. Отправим через мост (текущий % - целевой %) количество aevo sDAI в [своп-хранилище](https://etherscan.io/address/0x426d1F3866BfcDF4d0efEfeD1Ba3c5E06CaECbE6) в мейннете L1 через [L2 мост](https://explorer.aevo.xyz/address/0x4200000000000000000000000000000000000010)
+2. Произведем обмен sDAI на USDC через 1Inch с помощью функции `execute`
+3. Отправим через мост USDC обратно в сеть Aevo L2 через [L1 мост](https://etherscan.io/address/0x4082C9647c098a6493fb499EaE63b5ce3259c574), отметив хранилище aeUSD в качестве получателя
+4. Преобразуем USDC в хранилище aeUSD
 
-
-
-1. Bridge (current % - target %) amount of aevo USDC to the mainnet L1 [swap vault](https://etherscan.io/address/0x426d1F3866BfcDF4d0efEfeD1Ba3c5E06CaECbE6) via the [L2 bridge](https://explorer.aevo.xyz/address/0x4200000000000000000000000000000000000010)
-2. Swap from USDC to sDAI through 1Inch via the `execute` function
-3. Bridge the sDAI back to Aevo L1 via the [L1 bridge](https://etherscan.io/address/0x4082C9647c098a6493fb499EaE63b5ce3259c574), marking aeUSD vault as the recipient
-4. Mint aevo sDAI to the aeUSD vault&#x20;
-
-This increases aeUSD exposure to sDAI and increases the APY for aeUSD holders.
-
-**What happens if the current liquidity ratio < liquidity target (ex: 3% in USDC)?**
-
-Whenever there is an excess of sDAI in the vault we:
-
-1. Bridge (target % - current %) amount of aevo sDAI to the mainnet L1 [swap vault](https://etherscan.io/address/0x426d1F3866BfcDF4d0efEfeD1Ba3c5E06CaECbE6) via the [L2 bridge](https://explorer.aevo.xyz/address/0x4200000000000000000000000000000000000010)
-2. Swap from sDAI to USDC through 1Inch via the `execute` function
-3. Bridge the USDC back to Aevo L2 via the [L1 bridge](https://etherscan.io/address/0x4082C9647c098a6493fb499EaE63b5ce3259c574), marking aeUSD vault as the recipient
-4. Mint aevo USDC to the aeUSD vault&#x20;
-
-This increases aeUSD exposure to USDC in order to facilitate withdrawals.
+Это повысит соотношение aeUSD к USDC, чтобы упростить вывод средств.
 
 
 
-All of the above steps are performed within the confines of smart contracts on L1 and L2.
+Все вышеперечисленные действия выполняются в рамках смарт-контрактов L1 и L2.

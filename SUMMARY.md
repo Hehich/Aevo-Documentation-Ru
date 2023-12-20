@@ -31,7 +31,7 @@
   * [Депозиты](birzha-aevo/aeusd/depozity.md)
   * [Выплаты](birzha-aevo/aeusd/vyplaty.md)
   * [Состав](birzha-aevo/aeusd/sostav.md)
-* [Cross-Margin Collateral Framework](birzha-aevo/cross-margin-collateral-framework.md)
+* [Система кросс-маржинального обеспечения](birzha-aevo/sistema-kross-marzhinalnogo-obespecheniya.md)
 * [Spot Covert Feature](birzha-aevo/spot-covert-feature.md)
 * [API Reference](https://api-docs.aevo.xyz/reference/overview)
 
