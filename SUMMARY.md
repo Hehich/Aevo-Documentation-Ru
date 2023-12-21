@@ -32,8 +32,8 @@
   * [Выплаты](birzha-aevo/aeusd/vyplaty.md)
   * [Состав](birzha-aevo/aeusd/sostav.md)
 * [Система кросс-маржинального обеспечения](birzha-aevo/sistema-kross-marzhinalnogo-obespecheniya.md)
-* [Spot Covert Feature](birzha-aevo/spot-covert-feature.md)
-* [API Reference](https://api-docs.aevo.xyz/reference/overview)
+* [Функция Точечного Преобразования](birzha-aevo/funkciya-tochechnogo-preobrazovaniya.md)
+* [Справочник по API](https://api-docs.aevo.xyz/reference/overview)
 
 ## AEVO VAULTS
 

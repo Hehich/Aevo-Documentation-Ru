@@ -18,20 +18,20 @@
 
 ***
 
-## Cross-margin Trading Rules
+## Правила кросс-маржинальной торговли
 
-When a negative USDC balance is incurred AND the negative balance threshold of 100 USDC is met, the account's collateral would be auto-converted to top up the USDC balance. The auto-conversion process goes through the list of assets based on their liquidation order to convert into USDC.
+При возникновении отрицательного баланса в USDC  и достижении порога отрицательного баланса в 100 USDC, обеспечение счета будет автоматически конвертировано для пополнения баланса в USDC. Процесс автоконвертации проходит через список активов в соответствии с порядком их ликвидации для конвертации в USDC.
 
-There are 3 scenarios where a negative USDC balance could occur:
+Существуют 3 сценария, при которых возможно возникновение отрицательного баланса в USDC:
 
-1. Buying an option.
-2. Selling an option and it expires in-the-money (paying for settlement).
-3. Realizing negative perpetual futures PNL.
+1. Покупка опциона.
+2. Продажа опциона и его истечение в-деньгах (оплата за расчет).
+3. Реализация отрицательной прибыли (убытка) по бессрочным фьючерсам.&#x20;
 
-### Example
+### Пример
 
-1. Alice deposits 1 ETH. 1 ETH = $1000. Alice's equity is $1000.
-2. Alice uses $500 to buy options. This would bring Alice's USDC balance to -$500.
-3. Aevo will convert $500 of ETH into USDC. Alice's equity will still remain as $1000, but it will be composed of $500 of ETH, $0 of USDC, and $500 of ETH options.
+1. Алиса осуществляет депозит 1 ETH. 1 ETH = 1000$. Собственный капитал Алисы составляет 1000$.
+2. Алиса использует 500$ для покупки опционов. В результате USDC баланс Алисы составит -500$.
+3. Aevo конвертирует $500 ETH в USDC. Капитал Алисы по-прежнему будет составлять 1000$, но он будет состоять из $500 ETH, $0 USDC и 500$ опционов ETH.
 
-Note: This example does not account for trading and conversion fees incurred.
+Примечание: В данном примере не учитываются торговые и конверсионные комиссии.
