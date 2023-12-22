@@ -25,11 +25,9 @@
 
 У нас есть опцион колл на ETH стоимостью 2000 долларов. В этом примере мы обеспечим колл-опцион с помощью wstETH и предположим, что 1 wstETH = 1 stETH. Если ETH окажется в деньгах по цене $2500, держатель опциона сможет потребовать $500 за обычный опцион колл на ETH, или 0,2 ETH.
 
+В случае с wstETH, 0,2 wstETH могут быть востребованы по истечении срока действия опциона. Однако 0,2 wstETH можно обменять только на 0,19 ETH на таких пулах ликвидности, как Curve, что означает, что держатель опциона получит на 5 % меньше прибыли, если он вернется к ETH после выплаты.
 
+Последствия этого таковы:
 
-In the case of wstETH, 0.2 wstETH can be claimed at expiry. However, 0.2 wstETH can only be traded for 0.19 ETH on liquidity pools like Curve, which means the option holder would have 5% less profits if they swapped back to ETH after claiming.
-
-The implications for this are:
-
-* wstETH options have the same payoff calculation as a regular ETH option, except the collateral received is wstETH, which is unwrapped for stETH.
-* This means if stETH is trading 5% below the value of ETH, the amount returned from exercising the option is 5% less.
+* Опционы wstETH имеют тот же расчет выплат, что и обычные опционы ETH, за исключением того, что полученный залог - это wstETH, который разворачивается для stETH.
+* Это означает, что если stETH торгуется на 5% ниже стоимости ETH, то сумма, возвращаемая при исполнении опциона, будет на 5% меньше.

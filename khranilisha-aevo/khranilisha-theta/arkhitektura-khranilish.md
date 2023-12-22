@@ -1,19 +1,19 @@
-# Theta vaults architecture
+# Архитектура Хранилищ
 
-## Vault flow example
+## Пример потока хранилищ
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
-1. User deposits 100 ETH into T-ETH-C (ETH call).
-2. On Friday 8 am UTC, the vault closes the previous week round and subsequently uses 100% of its funds to mint 100 [otokens](https://opyn.gitbook.io/opyn/contracts/otoken), which are ERC20 representations of options contracts. The 100 ETH is locked for a week in Opyn.
-3. After receiving the 100 otokens, the vault puts it up for auction on [Paradigm](broken-reference).
-   * Registered users can participate and bid on the otokens. They pay the premiums for the otoken in ETH. Paradigm can use different kinds of auctions to maximise depositors' returns (e.g. [blind auctions](https://en.wikipedia.org/wiki/First-price\_sealed-bid\_auction))
-   * At the end of the auction, the vault collects 1 ETH in premiums in the form of ETH.
-   * Any remaining otokens that are not bought are burned, redeeming 1 otoken for 1 unit of collateral from Opyn.
-4. On the next Friday 8 am UTC,
-   * If the options expire in the money, the vault withdraws less than 100 ETH from Opyn.
-   * If the options expire out the money, the vault withdraws exactly 100 ETH.
-5. Let's say it expires out the money. The vault repeats step 2 with 101 ETH (original 100 ETH + 1 ETH premium).
+1. Пользователь вносит 100 ETH в T-ETH-C (колл ETH).
+2. В пятницу в 8 утра UTC хранилище закрывает раунд предыдущей недели и затем использует 100% своих средств для майнинга 100 otokens, которые являются ERC20-представлениями опционных контрактов. 100 ETH блокируются на неделю в Opyn.
+3. Получив 100 отокенов, хранилище выставляет его на аукцион [Paradigm](https://www.paradigm.co/).
+   * Зарегистрированные пользователи могут участвовать в торгах и делать ставки на отокены. Они платят премию за отокены в ETH. Paradigm может использовать различные виды аукционов для максимизации прибыли вкладчиков (например, [слепые аукционы](https://en.wikipedia.org/wiki/First-price\_sealed-bid\_auction))
+   * По окончании аукциона хранилище получает 1 ETH в виде премии.
+   * Все оставшиеся отокены, которые не были куплены, сжигаются, выкупая 1 отокен за 1 единицу залога у Опина.
+4. В следующую пятницу 8 утра UTC,
+   * Если срок действия опционов истекает в деньгах, хранилище выводит из Opyn менее 100 ETH.
+   * Если опционы заканчиваются не в деньгах, хранилище снимает ровно 100 ETH.
+5. Предположим, что срок действия контракта закончился не в деньгах. Хранилище повторяет шаг 2 с 101 ETH (первоначальные 100 ETH + 1 ETH премии).
 
 ### Codebase
 

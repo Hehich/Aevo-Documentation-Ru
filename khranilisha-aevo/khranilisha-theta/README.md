@@ -8,8 +8,8 @@ description: 'Ниже приведены статьи данного разде
 [znakomstvo-s-khranilishami-theta](znakomstvo-s-khranilishami-theta/)
 {% endcontent-ref %}
 
-{% content-ref url="theta-vaults-architecture.md" %}
-[theta-vaults-architecture.md](theta-vaults-architecture.md)
+{% content-ref url="arkhitektura-khranilish.md" %}
+[arkhitektura-khranilish.md](arkhitektura-khranilish.md)
 {% endcontent-ref %}
 
 {% content-ref url="bidding-on-aevo-rfq.md" %}
