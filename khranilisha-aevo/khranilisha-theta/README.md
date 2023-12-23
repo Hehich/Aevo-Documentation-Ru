@@ -12,6 +12,6 @@ description: 'Ниже приведены статьи данного разде
 [arkhitektura-khranilish.md](arkhitektura-khranilish.md)
 {% endcontent-ref %}
 
-{% content-ref url="bidding-on-aevo-rfq.md" %}
-[bidding-on-aevo-rfq.md](bidding-on-aevo-rfq.md)
+{% content-ref url="provedenie-torgov-na-aevo-rfq.md" %}
+[provedenie-torgov-na-aevo-rfq.md](provedenie-torgov-na-aevo-rfq.md)
 {% endcontent-ref %}
