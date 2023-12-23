@@ -2,14 +2,14 @@
 
 ## Пример потока хранилищ
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Picture 2.png" alt=""><figcaption></figcaption></figure>
 
 1. Пользователь вносит 100 ETH в T-ETH-C (колл ETH).
 2. В пятницу в 8 утра UTC хранилище закрывает раунд предыдущей недели и затем использует 100% своих средств для майнинга 100 otokens, которые являются ERC20-представлениями опционных контрактов. 100 ETH блокируются на неделю в Opyn.
 3. Получив 100 отокенов, хранилище выставляет его на аукцион [Paradigm](https://www.paradigm.co/).
    * Зарегистрированные пользователи могут участвовать в торгах и делать ставки на отокены. Они платят премию за отокены в ETH. Paradigm может использовать различные виды аукционов для максимизации прибыли вкладчиков (например, [слепые аукционы](https://en.wikipedia.org/wiki/First-price\_sealed-bid\_auction))
    * По окончании аукциона хранилище получает 1 ETH в виде премии.
-   * Все оставшиеся отокены, которые не были куплены, сжигаются, выкупая 1 отокен за 1 единицу залога у Опина.
+   * Все оставшиеся отокены, которые не были куплены, сжигаются, выкупая 1 отокен за 1 единицу залога в Opyn.
 4. В следующую пятницу 8 утра UTC,
    * Если срок действия опционов истекает в деньгах, хранилище выводит из Opyn менее 100 ETH.
    * Если опционы заканчиваются не в деньгах, хранилище снимает ровно 100 ETH.
@@ -17,21 +17,21 @@
 
 ### Codebase
 
-| Name                                                                                                                                               | Description                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| [libraries/Vault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/libraries/Vault.sol)                                       | Contains all data structures shared across all vault types                                                         |
-| [libraries/VaultLifecycle.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/libraries/VaultLifecycle.sol)                     | Contains all logic related to how the Vault functions on a weekly basis                                            |
-| [vaults/BaseVaults/base/RibbonVault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/vaults/BaseVaults/base/RibbonVault.sol) | Contains all common logic like accounting and options rolling shared across RibbonThetaVault and RibbonDeltaVault. |
-| [vaults/BaseVaults/RibbonThetaVault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/vaults/BaseVaults/RibbonThetaVault.sol) | Theta Vault contract that creates short options position with Opyn on a weekly basis                               |
+| Наименование                                                                                                                                       | Описание                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [libraries/Vault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/libraries/Vault.sol)                                       | Содержит все структуры данных, общие для всех типов хранилищ                                                   |
+| [libraries/VaultLifecycle.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/libraries/VaultLifecycle.sol)                     | Содержит всю логику, связанную с функционированием хранилища на еженедельной основе                            |
+| [vaults/BaseVaults/base/RibbonVault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/vaults/BaseVaults/base/RibbonVault.sol) | Содержит всю общую логику, такую как учет и обработка опционов, общую для RibbonThetaVault и RibbonDeltaVault. |
+| [vaults/BaseVaults/RibbonThetaVault.sol](https://github.com/ribbon-finance/ribbon-v2/blob/master/contracts/vaults/BaseVaults/RibbonThetaVault.sol) | Контракт Хранилищ Theta, который создает короткую опционную позицию с Opyn на еженедельной основе              |
 
-## Deposit Flow
+## Поток депозитов
 
-IMPORTANT: this is a _technical_ explanation, if you need assistance on making a deposit please refer to [this page](broken-reference)!
+ВАЖНО: это техническое объяснение, если вам нужна помощь в создании депозита, пожалуйста, обратитесь к `этой странице`!
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Picture 3.png" alt=""><figcaption></figcaption></figure>
 
-1. The user deposits 1 ETH into TV.
-2. We first check if they have an existing `DepositReceipt` from the past `round`. Using the `round` and `amount`, we update the `unredeemedShares` field. This essentially tracks how many shares the user owns, but has not yet redeemed.
+1. Пользователь вносит 1 ETH в хранилище Theta.
+2. Сначала мы проверяем, есть ли у них существующий DepositReceipt от прошлого цикла. Используя сведения о раунде и сумме, мы обновляем поле UnredeemedShares. По сути, оно отслеживает, сколько долей принадлежит пользователю, но еще не выкуплено.
 
 ```
 struct DepositReceipt {
@@ -41,50 +41,50 @@ struct DepositReceipt {
 }
 ```
 
-1. We create the DepositReceipt with the new details.
-2. At `rollToNextOption`, the vault will mint all the shares that are owed to users to `address(this)`. This increments the `vaultState.round`.
-3. Since the round is concluded, the user's vault shares should show up by calling `RibbonVault.shares(account)`
+4. Мы создаем DepositReceipt с новыми данными.
+5. При rollToNextOption хранилище сминтит все доли, причитающиеся пользователям, по адресу address(this). При этом увеличивается vaultState.round.
+6. Поскольку раунд завершен, акции хранилища пользователя должны отобразиться, вызвав RibbonVault.shares(account).
 
-The end result:
+Конечный результат:
 
-* Their shares show up automatically once the round concludes.
-* `DepositReceipt`s are used to track all the user's unredeemed shares. This is used for withdrawals and redemptions in the future.
+* Их акции появляются автоматически по завершении раунда.
+* DepositReceipts используются для отслеживания всех невыкупленных акций пользователя. Это используется для снятия и погашения средств в будущем.
 
-## Withdrawal Flow
+## Поток вывода средств
 
-IMPORTANT: this is a _technical_ explanation, if you need assistance on making a withdrawal please refer to [this page](broken-reference)!
+ВАЖНО: это техническое объяснение, если вам нужна помощь по выводу средств, пожалуйста, обратитесь к этой странице!
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Picture 4.png" alt=""><figcaption></figcaption></figure>
 
-The withdrawal flow is slightly more involved. We have two types of withdrawals - Standard and Instant withdrawals.
+Процесс вывода средств немного сложнее. У нас есть два типа вывода средств - стандартный и мгновенный.
 
-### **Standard withdrawals**
+### **Стандартное снятие средств**
 
-* Withdrawals are created with the `initiateWithdraw` function, which queues the shares to be burned.
-* Withdrawals are completed with `completeWithdraw` function, which burns the shares, and returns the assets.
-* Users can only call `completeWithdraw` only AFTER the week's Friday 10am UTC. For example, the user calls `initiateWithdraw` on Wednesday. They can only complete the withdrawal after the same week's Friday 10am UTC.
-* Withdrawals stack on top of each other. This means that if I do `initiateWithdraw(10)`, and I do `initiateWithdraw(20)` again, I will have a total withdrawal of 30 shares by Friday.
+* Вывод средств осуществляется с помощью функции initiateWithdraw, которая ставит акции в очередь на сжигание.
+* Вывод средств завершается функцией completeWithdraw, которая сжигает акции и возвращает активы.
+* Пользователи могут вызывать completeWithdraw только ПОСЛЕ пятницы 10 утра UTC. Например, пользователь вызывает
+* Вывод средств накладывается друг на друга. Это означает, что если я сделаю initiateWithdraw(10) и снова initiateWithdraw(20), то к пятнице у меня будет снято в общей сложности 30 акций.
 
-### **Instant withdrawals**
+### **Мгновенное снятие средств**
 
-* Instant withdrawals are only accessible to funds that are deposited mid-week.
-* For example, user deposits 10 ETH into TV on Wednesday. They can call `withdrawInstantly` to return up to 10 ETH, from Wednesday till Friday.
+* Мгновенное снятие доступно только для тех средств, которые были внесены в середине недели.
+* Например, пользователь вносит 10 ETH в хранилище Theta в среду. Он может позвонить по номеру withdrawInstantly и вернуть до 10 ETH со среды по пятницу.
 
-## Share Redemption Flow
+## Поток погашения акций
 
-IMPORTANT: this is a _technical_ explanation, if you need assistance on redeeming your vault shares please refer to [this page](broken-reference)!
+ВАЖНО: это техническое объяснение, если вам нужна помощь по выкупу акций хранилища, пожалуйста, обратитесь к этой странице!
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Picture 5.png" alt=""><figcaption></figcaption></figure>
 
-As mentioned before, when the user deposits into the vault, the vault mints and holds custody of the user's shares on `address(this)`. This is not ideal for protocols or Meta-Vaults that want to hold custody of their shares. By calling the `redeem` or `maxRedeem` function, contracts are able to take custody of their vault shares.
+Как уже говорилось, когда пользователь вносит депозит в хранилище, хранилище выпускает и хранит акции пользователя на address(this). Это не идеально для протоколов или метахранилищ, которые хотят хранить свои акции. Вызвав функцию redeem или maxRedeem, контракты могут взять под охрану свои акции хранилища.
 
-The share redemption flow is also triggered implicitly when users call `initiateWithdraw`.
+Поток выкупа акций также запускается неявно, когда пользователи вызывают `initiateWithdraw`.
 
-## Access Control
+## Контроль доступа
 
-| Name  | Privileges                                                                                                                                                                                                                                          |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Owner | <p>The owner can set key parameters of the vault such as feeRecipient, performanceFee, managementFee, deposit cap etc.</p><p>Some functions in the vault's lifecycle is only limited to the owner, such as commitAndClose and rollToNextOption.</p> |
-| Admin | The admin can upgrade the proxy's implementation address.                                                                                                                                                                                           |
+| Наименование  | Привилегии                                                                                                                                                                                                                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Владелец      | Владелец может задавать ключевые параметры хранилища, такие как feeRecipient, performanceFee, managementFee, лимит депозита и т. д. Некоторые функции в жизненном цикле хранилища ограничены только владельцем, например commitAndClose и rollToNextOption. |
+| Администратор | Администратор может обновить адрес реализации прокси-сервера.                                                                                                                                                                                               |
 
-Both of these privileged roles use a Gnosis Safe multisig wallet.
+Обе эти привилегированные роли используют мульти кошелек Gnosis Safe.
