@@ -64,11 +64,11 @@
 
 ## AEVO OTC
 
-* [Introduction](aevo-otc/introduction.md)
-* [Technical Architecture](aevo-otc/technical-architecture/README.md)
-  * [On-chain Margining System](aevo-otc/technical-architecture/on-chain-margining-system.md)
-  * [Mark Pricing](aevo-otc/technical-architecture/mark-pricing.md)
-  * [User Flow](aevo-otc/technical-architecture/user-flow.md)
+* [Введение](aevo-otc/vvedenie.md)
+* [Техническая Архитектура](aevo-otc/tekhnicheskaya-arkhitektura/README.md)
+  * [Система маржирования в блокчейн](aevo-otc/tekhnicheskaya-arkhitektura/sistema-marzhirovaniya-v-blokchein.md)
+  * [Ценообразование](aevo-otc/tekhnicheskaya-arkhitektura/cenoobrazovanie.md)
+  * [Поток пользователей](aevo-otc/tekhnicheskaya-arkhitektura/potok-polzovatelei.md)
 
 ## MORE
 
