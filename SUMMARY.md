@@ -70,17 +70,17 @@
   * [Ценообразование](aevo-otc/tekhnicheskaya-arkhitektura/cenoobrazovanie.md)
   * [Поток пользователей](aevo-otc/tekhnicheskaya-arkhitektura/potok-polzovatelei.md)
 
-## MORE
+## ДОПОЛНИТЕЛЬНО
 
-* [Treasury Vaults](more/treasury-vaults/README.md)
-  * [Why Treasury Vaults](more/treasury-vaults/why-treasury-vaults.md)
-  * [How to get involved](more/treasury-vaults/how-to-get-involved.md)
-* [Lend Vaults](more/lend-vaults.md)
-* [Legacy Ribbon Finance](more/legacy-ribbon-finance/README.md)
-  * [Legacy RBN tokenomics](more/legacy-ribbon-finance/legacy-rbn-tokenomics.md)
-  * [Legacy Ribbon Finance Deployed Contracts](more/legacy-ribbon-finance/legacy-ribbon-finance-deployed-contracts.md)
-  * [Legacy Ribbon Subgraph](more/legacy-ribbon-finance/legacy-ribbon-subgraph.md)
+* [Treasury Vaults](dopolnitelno/treasury-vaults/README.md)
+  * [Зачем нужны Treasury Vaults](dopolnitelno/treasury-vaults/zachem-nuzhny-treasury-vaults.md)
+  * [Как принять участие](dopolnitelno/treasury-vaults/kak-prinyat-uchastie.md)
+* [Lend Vaults](dopolnitelno/lend-vaults.md)
+* [Легаси Ribbon Finance](dopolnitelno/legasi-ribbon-finance/README.md)
+  * [Легаси токеномика RBN](dopolnitelno/legasi-ribbon-finance/legasi-tokenomika-rbn.md)
+  * [Легаси Развернутые Контракты Ribbon Finance](dopolnitelno/legasi-ribbon-finance/legasi-razvernutye-kontrakty-ribbon-finance.md)
+  * [Легаси Ribbon Subgraph](dopolnitelno/legasi-ribbon-finance/legasi-ribbon-subgraph.md)
 
-## SECURITY
+## БЕЗОПАСНОСТЬ
 
-* [Security](security/security.md)
+* [Безопасность](bezopasnost/bezopasnost.md)
